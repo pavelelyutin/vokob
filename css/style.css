@@ -1,0 +1,223 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat-Regular"),
+        url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("../fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Monserrat-Medium"),
+        url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+        url("../fonts/Montserrat-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat-Bold"),
+        url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("../fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Exo2";
+    src: local("Exo2-Regular"),
+        url("../fonts/Exo2-Regular.woff2") format("woff2"),
+        url("../fonts/Exo2-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Exo2";
+    src: local("Exo2-Medium"),
+        url("../fonts/Exo2-Medium.woff2") format("woff2"),
+        url("../fonts/Exo2-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Exo2";
+    src: local("Exo2-Bold"),
+        url("../fonts/Exo2-Bold.woff2") format("woff2"),
+        url("../fonts/Exo2-Bold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* glob */
+:root {
+    --primaryColor: #327482;
+    --lightGrayColor: #7D7D7D;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.btn-reset {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: 1px solid var(--primaryColor);
+    border-radius: 5px;
+    padding: 12px 20px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn:hover:not(:focus-visible) {
+    background-color: #cce2e7;
+}
+
+/* header-top */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-top {
+    border-bottom: 1px solid #DEDEDE;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.header-top__left {
+    display: flex;
+    align-items: center;
+}
+
+.header-top__center {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 100px;
+    height: 65px;
+    margin-right: 12px;
+}
+
+.header__name {
+    font-family: 'Exo2', sans-serif;
+    font-weight: 600;
+    width: 212px;
+    font-size: 12px;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+}
+
+.header__info {
+    padding-left: 23px;
+    font-weight: 500;
+    color: #2c2c2c;
+    background-repeat: no-repeat;
+    transition: color .2s ease-in-out;
+}
+
+.header__info:hover {
+    color: #327482;
+}
+
+.header__info--phone {
+    background-image: url('../img/phone.svg');
+}
+
+.header__info--location {
+    background-image: url('../img/location.svg');
+}
+
+.header__info:not(:last-child) {
+    margin-right: 60px;
+}
+
+.header__subtitle {
+    display: block;
+    font-size: 10px;
+    color: var(--lightGrayColor);
+}
+
+/* header-bottom */
+.header-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.nav__list {
+    display: flex;
+    gap: 50px;
+}
