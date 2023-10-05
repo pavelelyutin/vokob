@@ -1,4 +1,4 @@
-
+// фиксирование меню при прокрутке стриницы
 // window.addEventListener('scroll', function () {
 //     let scrollWindow = window.scrollY;
 //     let scrollHeaderBottom = document.querySelector('.header-top').scrollHeight;

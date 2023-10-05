@@ -152,10 +152,7 @@ img {
 
 .fixed {
   position: fixed;
-  background-color: #fff;
   top: 0;
-  left: 0;
-  right: 0;
 }
 
 /* header-top */
@@ -227,6 +224,7 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #DEDEDE;
+  background-color: var(--whiteColor);
 }
 .header-bottom__search {
   position: absolute;
@@ -277,6 +275,8 @@ img {
 .hero {
   position: relative;
   background-color: var(--primaryColor);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .hero__container {
   position: relative;
@@ -428,14 +428,123 @@ img {
   transition: 0.4s;
   cursor: pointer;
 }
+.accordion__button.active {
+  background-color: var(--lightColor);
+}
+.accordion__button:hover, .accordion__button:focus {
+  background-color: var(--lightColor);
+}
 .accordion__text {
   max-height: 0;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 15px 15px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  color: var(--lightGrayColor);
   transition: max-height 0.2s ease-out;
-  background-color: #eeeeee;
+  background-color: var(--whiteColor);
 }
 .accordion__text p {
   padding: 20px;
+}
+
+/* about */
+.about__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.about__picture {
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  background-color: var(--lightColor);
+}
+.about__title {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Exo2", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.about__text {
+  color: var(--lightGrayColor);
+  font-size: 14px;
+}
+
+/* footer */
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: var(--whiteColor);
+  background-color: var(--primaryColor);
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--lightColor);
+  padding-bottom: 30px;
+}
+.footer__center {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.footer__title {
+  text-transform: uppercase;
+  font-family: "Exo2", sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.footer__social {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.footer__logo {
+  margin-bottom: 30px;
+}
+.footer__links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.footer__btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contacts__email {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.contacts__address {
+  margin-bottom: 15px;
+  font-style: normal;
+}
+.contacts__phones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  margin-bottom: 30px;
+}
+
+.phone__title {
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--lightColor);
+}
+
+.footer-nav--left {
+  text-align: right;
+}
+.footer-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }/*# sourceMappingURL=style.css.map */
