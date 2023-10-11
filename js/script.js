@@ -48,3 +48,12 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 }
 
+// Модальное окно авторизации 
+const btnCabinet = document.querySelector('.btn--cabinet');
+const modalLogin = document.querySelector('.modal');
+const modalOverlay = document.querySelector('.modal-overlay');
+
+btnCabinet.addEventListener('click', function() {
+  modalLogin.classList.add('active-modal');
+  console.log('adfasdf')
+})
