@@ -48,12 +48,41 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 }
 
-// Модальное окно авторизации 
-const btnCabinet = document.querySelector('.btn--cabinet');
-const modalLogin = document.querySelector('.modal');
-const modalOverlay = document.querySelector('.modal-overlay');
+// МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ
+const btnCabinet = document.getElementById('btn-login');
+const modalLogin = document.getElementById('modal');
+const modalWindowLogin = document.querySelector('.modal__window');
+const modalBtnClose = document.querySelector('.modal__btn-close');
 
+// Открытие модального окна по клику на кнопку "Личный кабинет"
 btnCabinet.addEventListener('click', function() {
-  modalLogin.classList.add('active-modal');
-  console.log('adfasdf')
+  modalLogin.classList.add('open');
+  // document.body.classList.add('body-hidden');
+})
+
+// Закрытие модального окна по клику на кнопку-крестик
+modalBtnClose.addEventListener('click', () => {
+  modalLogin.classList.remove('open');
+})
+
+// Закрытие модального окна по нажатию на кнопку Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    modalLogin.classList.remove('open');
+    // document.body.classList.remove('body-hidden');
+  }
+})
+
+// Закрытие модального окна при клике вне его
+modalWindowLogin.addEventListener('click', (e) => {
+  e._isClickWithInModal = true;
+  console.log('asfasdfasfdasfd')
+})
+
+modalLogin.addEventListener('click', (e) => {
+  if (e._isClickWithInModal) {
+    return;
+  }
+  e.currentTarget.classList.remove('open');
+  // document.body.classList.remove('body-hidden');
 })

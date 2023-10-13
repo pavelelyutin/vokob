@@ -14,29 +14,38 @@
   <!-- header -->
   <header class="header">
 
-    <div class="modal open">
+    <!-- модальное окно авторизации -->
+    <div id="modal" class="modal">
       <div class="modal__window">
+        <button class="modal__btn-close">
+          <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 0.707106 -0.707108 0.707106 2 2)" stroke="#BEBEBE" stroke-width="2" />
+            <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 -0.707106 0.707108 0.707106 2.03479 21.9999)" stroke="#BEBEBE" stroke-width="2" />
+          </svg>
+        </button>
         <h2 class="modal__title">Авторизация</h2>
         <p class="modal__info">
           Добро пожаловать на&nbsp;сайт воронежской областной клинической офтальмологической больницы. 
-          Пожалуйста, введите свои учетный данные, если&nbsp;Вы уже регистрировались.
+          Пожалуйста, введите свои учетный данные, если&nbsp;Вы уже регистрировались. 
         </p>
-      </div>
-    </div>
+        <form class="modal__form modal-form" action="">
 
-      <!-- <div class="modal">
-        <h2 class="modal__title">Авторизация</h2>
-        <p class="modal__info">
-          Добро пожаловать на&nbsp;сайт воронежской областной клинической офтальмологической больницы. 
-          Пожалуйста, введите свои учетный данные, если&nbsp;Вы уже регистрировались.
-        </p>
-        <form action="">
-          <input class="modal__input" type="text">
+            <label class="modal-form__label label" for="">
+              <span class="label__title">Email</span>
+              <input class="modal-form__input" type="text">
+            </label>
+
+            <label class="modal-form__label label" for="">
+              <span class="label__title">Пароль</span>
+              <input class="modal-form__input" type="text">
+            </label>
+            
+            <button class="btn btn-reset modal__btn">Войти</button>
+            <button class="btn btn-reset btn--dark modal__btn">Зарегистрироваться</button>
         </form>
       </div>
-
-    <div class="modal-overlay"></div> -->
-
+    </div>
+    <!-- /модальное окно авторизации -->
 
     <div class="header__header-top header-top">
       <div class="container header__container">
@@ -58,7 +67,7 @@
         </div>
 
         <div class="header-top__right">
-          <button class="btn btn-reset btn--cabinet">Личный кабинет</button>
+          <button id="btn-login" class="btn btn-reset btn--cabinet">Личный кабинет</button>
         </div>
 
 
