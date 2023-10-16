@@ -205,7 +205,7 @@ img {
   letter-spacing: 2px;
 }
 .modal__info {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
   font-size: 12px;
   color: var(--lightGrayColor);
@@ -224,6 +224,15 @@ img {
   transform: scale(1);
 }
 
+.modal-form__group {
+  margin-bottom: 30px;
+}
+.modal-form__label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: var(--lightGrayColor);
+}
 .modal-form__input {
   width: 100%;
   border-radius: 5px;
@@ -231,16 +240,8 @@ img {
   outline: 1px solid rgb(199, 199, 199);
   padding: 10px;
 }
-
-.label {
-  display: block;
-  margin-bottom: 20px;
-}
-.label__title {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-size: 12px;
-  color: var(--blackColor);
+.modal-form__input:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .body-hidden {

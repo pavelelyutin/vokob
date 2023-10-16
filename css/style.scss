@@ -243,7 +243,7 @@ img {
   }
 
   &__info {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
     font-size: 12px;
     color: var(--lightGrayColor);
@@ -265,24 +265,27 @@ img {
 }
 
 .modal-form {
+  &__group {
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: var(--lightGrayColor);
+  }
+
   &__input {
     width: 100%;
     border-radius: 5px;
     border: none;
     outline: 1px solid rgb(199, 199, 199);
     padding: 10px;
-  }
-}
 
-.label {
-  display: block;
-  margin-bottom: 20px;
-
-  &__title {
-    display: inline-block;
-    margin-bottom: 5px;
-    font-size: 12px;
-    color: var(--blackColor);
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 

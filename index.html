@@ -30,16 +30,13 @@
         </p>
         <form class="modal__form modal-form" action="">
 
-            <label class="modal-form__label label" for="">
-              <span class="label__title">Email</span>
-              <input class="modal-form__input" type="text">
-            </label>
+          <div class="modal-form__group">
+            <label class="modal-form__label" for="email">Email</label>
+            <input id="email" class="modal-form__input" type="text">
 
-            <label class="modal-form__label label" for="">
-              <span class="label__title">Пароль</span>
-              <input class="modal-form__input" type="text">
-            </label>
-            
+            <label class="modal-form__label" for="password">Пароль</label>
+            <input id="password" class="modal-form__input" type="text">
+          </div>
             <button class="btn btn-reset modal__btn">Войти</button>
             <button class="btn btn-reset btn--dark modal__btn">Зарегистрироваться</button>
         </form>
