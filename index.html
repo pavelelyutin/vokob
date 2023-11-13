@@ -17,29 +17,33 @@
     <!-- модальное окно авторизации -->
     <div id="modal" class="modal">
       <div class="modal__window">
-        <button class="modal__btn-close">
-          <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 0.707106 -0.707108 0.707106 2 2)" stroke="#BEBEBE" stroke-width="2" />
-            <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 -0.707106 0.707108 0.707106 2.03479 21.9999)" stroke="#BEBEBE" stroke-width="2" />
-          </svg>
-        </button>
-        <h2 class="modal__title">Авторизация</h2>
-        <p class="modal__info">
-          Добро пожаловать на&nbsp;сайт воронежской областной клинической офтальмологической больницы. 
-          Пожалуйста, введите свои учетный данные, если&nbsp;Вы уже регистрировались. 
-        </p>
+    
         <form class="modal__form modal-form" action="">
-
-          <div class="modal-form__group">
-            <label class="modal-form__label" for="email">Email</label>
-            <input id="email" class="modal-form__input" type="text">
-
-            <label class="modal-form__label" for="password">Пароль</label>
-            <input id="password" class="modal-form__input" type="text">
+    
+          <div class="modal-form__top">
+            <h2 class="modal-form__title">Авторизация</h2>
+            <button type="button" class="modal__btn-close">
+              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 0.707106 -0.707108 0.707106 2 2)"
+                  stroke="#BEBEBE" stroke-width="2" />
+                <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 -0.707106 0.707108 0.707106 2.03479 21.9999)"
+                  stroke="#BEBEBE" stroke-width="2" />
+              </svg>
+            </button>
           </div>
-            <button class="btn btn-reset modal__btn">Войти</button>
-            <button class="btn btn-reset btn--dark modal__btn">Зарегистрироваться</button>
+    
+          <div class="modal-form__body">
+            <input class="modal-form__input" type="text" placeholder="Email">
+            <input class="modal-form__input" type="password" placeholder="Пароль">
+          </div>
+    
+          <div class="modal-form__bottom">
+            <button class="btn btn-reset btn--dark modal-form__btn">Войти</button>
+            <button class="btn btn-reset modal-form__btn">Регистрация</button>
+          </div>
+    
         </form>
+    
       </div>
     </div>
     <!-- /модальное окно авторизации -->
@@ -48,18 +52,18 @@
       <div class="container header__container">
 
         <div class="header-top__left">
-          <a class="logo header__logo" href="#"><img src="./img/logo.svg" alt="Логотип больницы"></a>
+          <a class="logo header__logo" href="#"><img src="./img/logo-new.svg" alt="Логотип больницы"></a>
           <div class="header__name">Воронежская<br> областная клиническая офтальмологическая больница</div>
         </div>
 
         <div class="header-top__center">
-          <div class="phone header__info header__info--phone">
-            <a href="tel:+79999999999">+7 (473) 252 94 46</a>
-            <span class="header__subtitle">Call-центр</span>
+          <div class="info header__info header__info--phone">
+            <a class="info__link" href="tel:+79999999999">+7 (473) 252 94 46</a>
+            <span class="info__subtitle">Call-центр</span>
           </div>
-          <div class="phone header__info header__info--location">
-            <span>Революции 1905 г., 22</span>
-            <span class="header__subtitle">Пн - Сб, 08:00 - 20:00</span>
+          <div class="info header__info header__info--location">
+            <a class="info__link" href="#">Революции 1905 г., 22</a>
+            <span class="info__subtitle">Пн - Сб, 08:00 - 20:00</span>
           </div>
         </div>
 
@@ -126,7 +130,7 @@
 
         <div class="section__top">
           <h2 class="section__title">Наши услуги</h2>
-          <button class="btn btn-reset">Все новости</button>
+          <button class="btn btn-reset">Все услуги</button>
         </div>
 
         <ul class="services__list list-reset">
@@ -217,7 +221,6 @@
     </section>
     <!-- /services -->
 
-
     <!-- news -->
     <section class="section news">
       <div class="container news__container">
@@ -229,20 +232,20 @@
         <ul class="news__list list-reset">
 
           <li class="news__item">
-            <img class="news__img" src="./img/news-img.jpg" alt="">
-              <div class="news__date date">
-                <span class="date__day">27</span>
-                <div class="date__month-year">
-                  <span class="date__month">декабря</span>
-                  <span class="date__year">2023 года</span>
-                </div>
+            <a href=""><img class="news__img" src="./img/111.jpg" alt=""></a>
+            <div class="news__date date">
+              <span class="date__day">27</span>
+              <div class="date__month-year">
+                <span class="date__month">декабря</span>
+                <span class="date__year">2023 года</span>
               </div>
-  
-              <div class="news__text">
-                <p>10&nbsp;декабря в&nbsp;ВОКОБ состоялась лекция для пациентов о&nbsp;возрастной макулярной дегенерации (ВМД).</p>
-              </div>
-
-              <button class="btn btn-reset news__btn">Читать далее</button>
+            </div>
+          
+            <div class="news__text">
+              <p>10&nbsp;декабря в&nbsp;ВОКОБ состоялась лекция для пациентов о&nbsp;возрастной макулярной дегенерации (ВМД).</p>
+            </div>
+          
+            <button class="btn btn-reset news__btn">Читать далее</button>
           </li>
 
           <li class="news__item">
