@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ВОКОБ</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://api-maps.yandex.ru/v3/?apikey=48873fd2-c024-4cf2-8818-91ba038a48e3&lang=ru_RU"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
@@ -32,9 +33,21 @@
             </button>
           </div>
     
-          <div class="modal-form__body">
+          <!-- <div class="modal-form__body">
             <input class="modal-form__input" type="text" placeholder="Email">
             <input class="modal-form__input" type="password" placeholder="Пароль">
+          </div> -->
+
+          <div class="modal-form__body">
+            <div class="modal-form__input-box">
+              <input class="modal-form__input" required type="text">
+              <label class="modal-form__label" for="">Email</label>
+            </div>
+
+            <div class="modal-form__input-box">
+              <input class="modal-form__input" required type="password">
+              <label class="modal-form__label" for="">Пароль</label>
+            </div>
           </div>
     
           <div class="modal-form__bottom">
@@ -58,11 +71,11 @@
 
         <div class="header-top__center">
           <div class="info header__info header__info--phone">
-            <a class="info__link" href="tel:+79999999999">+7 (473) 252 94 46</a>
+            <a class="info__link link" href="tel:+79999999999">+7 (473) 252 94 46</a>
             <span class="info__subtitle">Call-центр</span>
           </div>
           <div class="info header__info header__info--location">
-            <a class="info__link" href="#">Революции 1905 г., 22</a>
+            <a class="info__link link" href="#">Революции 1905 г., 22</a>
             <span class="info__subtitle">Пн - Сб, 08:00 - 20:00</span>
           </div>
         </div>
@@ -83,12 +96,12 @@
 
           <div class="nav__left">
             <ul class="nav__list list-reset">
-              <li class="nav__item"><a class="nav__link" href="#">О больнице</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Отделения</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Врачи</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Цены</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Новости</a></li>
+              <li class="nav__item"><a class="nav__link link" href="#">О больнице</a></li>
+              <li class="nav__item"><a class="nav__link link" href="#">Отделения</a></li>
+              <li class="nav__item"><a class="nav__link link" href="#">Врачи</a></li>
+              <li class="nav__item"><a class="nav__link link" href="#">Услуги</a></li>
+              <li class="nav__item"><a class="nav__link link" href="#">Цены</a></li>
+              <li class="nav__item"><a class="nav__link link" href="#">Новости</a></li>
             </ul>
             <div class="header-bottom__searh-container">
               <form action="">
@@ -232,7 +245,7 @@
         <ul class="news__list list-reset">
 
           <li class="news__item">
-            <a href=""><img class="news__img" src="./img/111.jpg" alt=""></a>
+            <img class="news__img" src="./img/111.jpg" alt="">
             <div class="news__date date">
               <span class="date__day">27</span>
               <div class="date__month-year">
@@ -420,6 +433,10 @@
     </section>
     <!-- /about -->
 
+    <!-- <div class="section map">
+      <div id="map" style="width: 100%; height: 350px"></div>
+    </div> -->
+
   </main>
 
   <!-- footer -->
@@ -429,27 +446,27 @@
 
         <div class="footer__contacts contacts">
           <h2 class="footer__title">Контакты</h2>
-          <a class="contacts__email" href="mailto:vokob@zdrav36.ru">vokob@zdrav36.ru</a>
+          <a class="contacts__email link link--footer" href="mailto:vokob@zdrav36.ru">vokob@zdrav36.ru</a>
           <address class="contacts__address">394030, г. Воронеж, ул. Революции 1905 года, д. 22</address>
           <div class="contacts__phones">
             <div class="contacts__phone phone">
               <h3 class="phone__title">Платные услуги</h3>
-              <a class="phone__number" href="#">+7(908)148-27-34</a>
+              <a class="phone__number link link--footer" href="#">+7(908)148-27-34</a>
             </div>
 
             <div class="contacts__phone phone">
               <h3 class="phone__title">Платные услуги</h3>
-              <a class="phone__number" href="#">+7(908)148-27-34</a>
+              <a class="phone__number link link--footer" href="#">+7(908)148-27-34</a>
             </div>
 
             <div class="contacts__phone phone">
               <h3 class="phone__title">Платные услуги</h3>
-              <a class="phone__number" href="#">+7(908)148-27-34</a>
+              <a class="phone__number link link--footer" href="#">+7(908)148-27-34</a>
             </div>
 
             <div class="contacts__phone phone">
               <h3 class="phone__title">Платные услуги</h3>
-              <a class="phone__number" href="#">+7(908)148-27-34</a>
+              <a class="phone__number link link--footer" href="#">+7(908)148-27-34</a>
             </div>
           </div>
 
@@ -461,12 +478,12 @@
             <h2 class="footer__title">Пациентам</h2>
             <nav class="footer__footer-nav footer-nav footer-nav--left">
               <ul class="footer-nav__list list-reset">
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Услуги</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Анализы</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Врачи</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Акции</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Цены</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Администрация</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Услуги</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Анализы</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Врачи</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Акции</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Цены</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Администрация</a></li>
               </ul>
             </nav>
           </div>
@@ -474,12 +491,12 @@
             <h2 class="footer__title">Больница</h2>
             <nav class="footer__footer-nav footer-nav">
               <ul class="footer-nav__list list-reset">
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">О нас</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Партернам</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Новости</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Ваканисии</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Отзывы</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="">Документы</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">О нас</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Партернам</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Новости</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Ваканисии</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Отзывы</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link link" href="">Документы</a></li>
               </ul>
             </nav>
           </div>
