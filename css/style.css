@@ -151,7 +151,7 @@ img {
 }
 
 .link {
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 .link:hover:not(:focus-visible) {
   color: var(--primaryColor);
@@ -162,6 +162,17 @@ img {
 .link:focus-visible {
   outline: none;
   background-color: rgb(253, 220, 142);
+}
+.link--light:hover:not(:focus-visible) {
+  color: var(--whiteColor);
+  text-decoration: underline;
+}
+.link--light:active:not(:focus-visible) {
+  color: #c7e5f7;
+}
+.link--light:focus-visible {
+  outline: none;
+  background-color: rgb(255, 194, 27);
 }
 
 .section {
@@ -181,6 +192,13 @@ img {
   font-family: "Exo2", sans-serif;
   font-size: 48px;
   font-weight: 700;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .modal {
@@ -372,7 +390,7 @@ img {
 .header-bottom__search {
   position: absolute;
   right: 0;
-  top: -14px;
+  top: 2px;
   min-height: 45px;
   width: 250px;
   border: 1px solid var(--lightColor);
@@ -407,11 +425,29 @@ img {
   align-items: center;
   gap: 50px;
 }
-.nav__link {
-  transition: color 0.3s ease-in-out;
+.nav__item {
+  position: relative;
+  padding: 15px 0;
 }
-.nav__link:hover {
-  color: var(--primaryColor);
+.nav__dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: -20px;
+  min-width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
+  padding: 15px 30px;
+  background-color: var(--whiteColor);
+}
+
+.nav__item:hover .nav__dropdown {
+  display: block;
+}
+
+.dropdown__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 /* hero */
@@ -664,22 +700,35 @@ img {
   font-size: 20px;
   margin-bottom: 30px;
 }
-.footer__social {
+.footer__btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.social {
   justify-self: end;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-.footer__logo {
+.social__logo {
   margin-bottom: 30px;
 }
-.footer__links {
+.social__icons {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   margin-bottom: 30px;
 }
-.footer__btn:not(:last-child) {
-  margin-bottom: 15px;
+.social__icon svg path {
+  transition: fill 0.3s ease;
+}
+.social__icon:hover svg path {
+  fill: rgb(255, 194, 27);
+}
+.social__icon:focus {
+  outline: none;
+}
+.social__icon:focus svg path {
+  fill: rgb(255, 194, 27);
 }
 
 .contacts__email {
@@ -711,10 +760,4 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.footer-nav__link {
-  transition: 0.3s;
-}
-.footer-nav__link:hover {
-  color: #D2A94D;
 }/*# sourceMappingURL=style.css.map */

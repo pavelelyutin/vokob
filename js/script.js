@@ -1,37 +1,16 @@
 // фиксирование меню при прокрутке стриницы
-// window.addEventListener('scroll', function () {
-//     let scrollWindow = window.scrollY;
-//     let scrollHeaderBottom = document.querySelector('.header-top').scrollHeight;
-//     console.log(scrollWindow);
-//     console.log(scrollHeaderBottom);
+window.addEventListener('scroll', function () {
+    let scrollWindow = window.scrollY;
+    let scrollHeaderBottom = document.querySelector('.header-top').scrollHeight;
 
-//     if (scrollWindow > scrollHeaderBottom) {
-//         this.document.querySelector('.header-bottom').classList.add('fixed');
-//     } else {
-//         this.document.querySelector('.header-bottom').classList.remove('fixed');
-//     }
-// });
-
-
-// window.scroll(function () {
-//     let top = window.document.scrollTop();
-//     if (top > topPos) {
-//         topPos.addClass('fixed');
-//     } else {
-//         topPos.removeClass('fixed');
-//     }
-// });
-
-// $(function () {
-//     var topPos = $('.header-bottom').first().offset().top;
-//     $(window).scroll(function () {
-//         var top = $(document).scrollTop();
-//         if (top > topPos) $('.header-bottom').addClass('fixed');
-//         else $('.my_class_name').removeClass('fixed');
-//     });
-// });
-
-// alert('dsflfdf')
+    if (scrollWindow > scrollHeaderBottom) {
+        this.document.querySelector('.header-bottom').classList.add('fixed');
+        this.document.querySelector('.hero').style.margin = '95px 0 0 0';
+    } else {
+        this.document.querySelector('.header-bottom').classList.remove('fixed');
+        this.document.querySelector('.hero').style.margin = '0';
+    }
+});
 
 // Аккордион в секции с популярными вопросами
 let accordionBtn = document.getElementsByClassName("accordion__button");
@@ -86,82 +65,3 @@ modalLogin.addEventListener('click', (e) => {
   e.currentTarget.classList.remove('open');
   // document.body.classList.remove('body-hidden');
 })
-
-
-// initMap();
-
-// async function initMap() {
-//     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
-//     await ymaps3.ready;
-
-//     const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
-
-//     // Иницилиазируем карту
-//     const map = new YMap(
-//         // Передаём ссылку на HTMLElement контейнера
-//         document.getElementById('map'),
-
-//         // Передаём параметры инициализации карты
-//         {
-//             location: {
-//                 // Координаты центра карты
-//                 center: [39.195930, 51.672947],
-//                 // 51.672947, 39.195930
-//                 // Уровень масштабирования
-//                 zoom: 15
-//             }
-//         }
-//     );
-
-//     // Добавляем слой для отображения схематической карты
-//     map.addChild(new YMapDefaultSchemeLayer());
-//     map.addChild(new YMapDefaultFeaturesLayer());
-
-//     // Создайте DOM-элемент для содержимого маркера.
-// // Важно это сделать до инициализации маркера!
-// // Элемент можно создавать пустым. Добавить HTML-разметку внутрь можно после инициализации маркера.
-// const content = document.createElement('div');
-
-// // Инициализируйте маркер
-// const marker = new YMapMarker(
-//   {
-//     source: './img/lacation.svg',
-//     coordinates: [39.195930, 51.672947],
-//     draggable: false
-//   },
-//   content
-// );
-
-// // Добавьте маркер на карту
-// map.addChild(marker);
-
-// // Добавьте произвольную HTML-разметку внутрь содержимого маркера
-// content.innerHTML = '<h1>Этот заголовок можно перетаскивать</h1>';
-// }
-
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'horizontal',
-//   loop: true,
-
-//   // If we need pagination
-//   // pagination: {
-//   //   el: '.swiper-pagination',
-//   // },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   slidesPerView: 4,
-//   mousewheel: {
-//     forceToAxis: true,
-//   },
-
-//   // And if we need scrollbar
-//   // scrollbar: {
-//   //   el: '.swiper-scrollbar',
-//   // },
-// });
