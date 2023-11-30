@@ -5,10 +5,10 @@ window.addEventListener('scroll', function () {
 
     if (scrollWindow > scrollHeaderBottom) {
         this.document.querySelector('.header-bottom').classList.add('fixed');
-        this.document.querySelector('.hero').style.margin = '95px 0 0 0';
+        this.document.querySelector('main').style.margin = '90px 0 0 0';
     } else {
         this.document.querySelector('.header-bottom').classList.remove('fixed');
-        this.document.querySelector('.hero').style.margin = '0';
+        this.document.querySelector('main').style.margin = '0';
     }
 });
 
@@ -29,9 +29,10 @@ for (let i = 0; i < accordionBtn.length; i++) {
 
 // МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ
 const btnCabinet = document.getElementById('btn-login');
-const modalLogin = document.getElementById('modal');
+const modalLogin = document.getElementById('login');
+const modalRegistration = document.getElementById('registration');
 const modalWindowLogin = document.querySelector('.modal__window');
-const modalBtnClose = document.querySelector('.modal__btn-close');
+const modalBtnClose = document.querySelectorAll('.modal__btn-close');
 
 // Открытие модального окна по клику на кнопку "Личный кабинет"
 btnCabinet.addEventListener('click', function() {
@@ -40,28 +41,57 @@ btnCabinet.addEventListener('click', function() {
 })
 
 // Закрытие модального окна по клику на кнопку-крестик
-modalBtnClose.addEventListener('click', () => {
-  modalLogin.classList.remove('open');
+modalBtnClose.forEach((w) => {
+  w.addEventListener('click', () => {
+    modalLogin.classList.remove('open');
+    modalRegistration.classList.remove('open');
+  })
 })
 
 // Закрытие модального окна по нажатию на кнопку Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     modalLogin.classList.remove('open');
+    modalRegistration.classList.remove('open');
     // document.body.classList.remove('body-hidden');
   }
 })
 
 // Закрытие модального окна при клике вне его
-modalWindowLogin.addEventListener('click', (e) => {
-  e._isClickWithInModal = true;
-  console.log('asfasdfasfdasfd')
+// modalWindow.addEventListener('click', (e) => {
+//   e._isClickWithInModal = true;
+// })
+
+// modalLogin.addEventListener('click', (e) => {
+//   if (e._isClickWithInModal) {
+//     return;
+//   }
+//   e.currentTarget.classList.remove('open');
+//   // document.body.classList.remove('body-hidden');
+// })
+
+// modalRegistration.addEventListener('click', (e) => {
+//   if (e._isClickWithInModal) {
+//     return;
+//   }
+//   e.currentTarget.classList.remove('open');
+//   // document.body.classList.remove('body-hidden');
+// })
+
+// Закрытие модального окна авторизации при открытии модального окна регистрации и наоборот
+const registrationModalLink = document.querySelector('.modal-form__registration-link');
+const loginModalLink = document.querySelector('.modal-form__login-link')
+
+registrationModalLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  modalLogin.classList.remove('open');
+  modalRegistration.classList.add('open');
 })
 
-modalLogin.addEventListener('click', (e) => {
-  if (e._isClickWithInModal) {
-    return;
-  }
-  e.currentTarget.classList.remove('open');
-  // document.body.classList.remove('body-hidden');
+loginModalLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  modalRegistration.classList.remove('open');
+  modalLogin.classList.add('open');
 })
+
+

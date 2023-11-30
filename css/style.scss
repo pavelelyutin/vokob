@@ -257,15 +257,15 @@ img {
   transition: opacity .3s ease, visibility .3s ease;
 
   &__window {
-    position: relative;
+    position: absolute;
     width: 500px;
     min-height: 400px;
     padding: 60px 50px;
     background-color: var(--whiteColor);
-    box-shadow: 1px 0px 15px 1px rgba(34, 60, 80, 0.2);
-    // transform: scale(0) perspective(300px) rotateX(30deg);
-    transform: scale(0);
-    transition: transform .3s ease;
+    box-shadow: 1px 1px 15px 5px rgba(34, 60, 80, 0.3);
+    transform: scale(0) perspective(300px) rotateX(30deg);
+    // transform: scale(0);
+    transition: transform .5s ease;
   }
 
   &__btn-close {
@@ -337,7 +337,7 @@ img {
   }
 
   &__body {
-    margin-bottom: 65px;
+    margin-bottom: 25px;
   }
 
   &__input-box {
@@ -356,13 +356,32 @@ img {
   }
 
   &__bottom {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+    // display: flex;
+    // justify-content: space-between;
   }
 
   &__btn {
-    border-radius: 25px;
     min-width: 180px;
+    margin-bottom: 20px;
+  }
+
+  &__registration-link {
+    color: var(--primaryColor);
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__login-link {
+    color: var(--primaryColor);
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -433,8 +452,8 @@ img {
 
 .header-top {
   border-bottom: 1px solid #DEDEDE;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &__left {
     display: flex;
@@ -450,10 +469,11 @@ img {
 /* header-bottom */
 .header-bottom {
   z-index: 1000;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #DEDEDE;
   background-color: var(--whiteColor);
+  box-shadow: 0px 3px 8px 0px rgba(122, 122, 122, 0.2);
 
   &__search {
     position: absolute;
@@ -503,21 +523,24 @@ img {
   }
 
   &__dropdown {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     z-index: 1000;
-    left: -20px;
-    min-width: 200px;
+    left: -35px;
+    min-width: 250px;
     margin-top: 10px;
     border-radius: 5px;
-    box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
-    padding: 15px 30px;
+    box-shadow: 0px 2px 15px 2px rgba(34, 60, 80, 0.2);
+    padding: 20px 35px;
     background-color: var(--whiteColor);
+    transition: all .2s ease;
   }
 }
 
 .nav__item:hover .nav__dropdown {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown {

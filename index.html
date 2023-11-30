@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ВОКОБ</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script src="https://api-maps.yandex.ru/v3/?apikey=48873fd2-c024-4cf2-8818-91ba038a48e3&lang=ru_RU"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
@@ -16,11 +15,11 @@
   <header class="header">
 
     <!-- модальное окно авторизации -->
-    <div id="modal" class="modal">
-      <div class="modal__window">
+    <div id="login" class="modal">
     
-        <form class="modal__form modal-form" action="">
+      <div class="modal__window modal__window--login">
     
+        <form id="login" class="modal__form modal-form" method="POST" action="">
           <div class="modal-form__top">
             <h2 class="modal-form__title">Авторизация</h2>
             <button type="button" class="modal__btn-close">
@@ -32,13 +31,13 @@
               </svg>
             </button>
           </div>
-
+    
           <div class="modal-form__body">
             <div class="modal-form__input-box">
               <input class="modal-form__input" required type="text">
               <label class="modal-form__label" for="">Email</label>
             </div>
-
+    
             <div class="modal-form__input-box">
               <input class="modal-form__input" required type="password">
               <label class="modal-form__label" for="">Пароль</label>
@@ -47,21 +46,62 @@
     
           <div class="modal-form__bottom">
             <button class="btn btn-reset btn--dark modal-form__btn">Войти</button>
-            <button class="btn btn-reset modal-form__btn">Регистрация</button>
+            <!-- <button class="btn btn-reset modal-form__btn">Регистрация</button> -->
+            <p>Вы не зарегистрированы? <a href="" class="modal-form__registration-link">Регистрация</a></p>
           </div>
-    
         </form>
-    
       </div>
     </div>
+    
+    <div id="registration" class="modal">
+      <div class="modal__window modal__window--registration">
+        <form id="register" class="modal__form modal-form" method="POST" action="">
+          <div class="modal-form__top">
+            <h2 class="modal-form__title">Регистрация</h2>
+            <button type="button" class="modal__btn-close">
+              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 0.707106 -0.707108 0.707106 2 2)"
+                  stroke="#BEBEBE" stroke-width="2" />
+                <line y1="-1" x2="28.235" y2="-1" transform="matrix(0.707108 -0.707106 0.707108 0.707106 2.03479 21.9999)"
+                  stroke="#BEBEBE" stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+    
+          <div class="modal-form__body">
+            <div class="modal-form__input-box">
+              <input class="modal-form__input" required type="text">
+              <label class="modal-form__label" for="">Email</label>
+            </div>
+    
+            <div class="modal-form__input-box">
+              <input class="modal-form__input" required type="password">
+              <label class="modal-form__label" for="">Пароль</label>
+            </div>
+    
+            <div class="modal-form__input-box">
+              <input class="modal-form__input" required type="password">
+              <label class="modal-form__label" for="">Повторите пароль</label>
+            </div>
+          </div>
+    
+          <div class="modal-form__bottom">
+            <button class="btn btn-reset btn--dark modal-form__btn">Зарегистрироваться</button>
+            <p>Уже зарегистрированы? <a href="" class="modal-form__login-link">Войти</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+
     <!-- /модальное окно авторизации -->
 
     <div class="header__header-top header-top">
       <div class="container header__container">
 
         <div class="header-top__left">
-          <a class="logo header__logo" href="#"><img src="./img/logo-new.svg" alt="Логотип больницы"></a>
-          <div class="header__name">Воронежская<br> областная клиническая офтальмологическая больница</div>
+          <a class="logo header__logo" href="/"><img src="./img/logo-new.svg" alt="Логотип больницы"></a>
+          <div class="header__name">Воронежская <br>областная клиническая офтальмологическая больница</div>
         </div>
 
         <div class="header-top__center">
@@ -79,8 +119,6 @@
           <button id="btn-login" class="btn btn-reset btn--cabinet">Личный кабинет</button>
         </div>
 
-
-
       </div>
     </div>
 
@@ -91,17 +129,19 @@
 
           <div class="nav__left">
             <ul class="nav__list list-reset">
-              <li class="nav__item"><a class="nav__link link" href="#">О больнице</a></li>
               <li class="nav__item">
-                <a class="nav__link link" href="#">Отделения</a>
+                <a class="nav__link link" href="#">О больнице</a>
                 <ul class="nav__dropdown dropdown list-reset">
-                  <li class="dropdown__item"><a class="dropdown__link link" href="">1 отделение</a></li>
-                  <li class="dropdown__item"><a class="dropdown__link link" href="">2 отделение</a></li>
-                  <li class="dropdown__item"><a class="dropdown__link link" href="">3 отделение</a></li>
-                  <li class="dropdown__item"><a class="dropdown__link link" href="">4 отделение</a></li>
-                  <li class="dropdown__item"><a class="dropdown__link link" href="">5 отделение</a></li>
-                  <li class="dropdown__item"><a class="dropdown__link link" href="">6 отделение</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link link" href="">О нас</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link link" href="">Отделения</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link link" href="">История</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link link" href="">Пациенту</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link link" href="">Документы</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link link" href="./vacancies.html">Вакансии</a></li>
                 </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Контакты</a>
               </li>
               <li class="nav__item"><a class="nav__link link" href="#">Врачи</a></li>
               <li class="nav__item"><a class="nav__link link" href="#">Услуги</a></li>
