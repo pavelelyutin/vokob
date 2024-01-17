@@ -399,7 +399,7 @@ img {
   padding-bottom: 15px;
   border-bottom: 1px solid #DEDEDE;
   background-color: var(--whiteColor);
-  box-shadow: 0px 3px 8px 0px rgba(122, 122, 122, 0.2);
+  box-shadow: 0px 2px 4px 0px rgba(122, 122, 122, 0.2);
 }
 .header-bottom__search {
   position: absolute;
@@ -583,7 +583,7 @@ img {
 .news__btn {
   margin-top: auto;
 }
-.news .date {
+.date {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -595,12 +595,12 @@ img {
   line-height: 100%;
   letter-spacing: -0.66px;
 }
-.news .date__day {
+.date__day {
   color: var(--blackColor);
   font-size: 40px;
   letter-spacing: -2.2px;
 }
-.news .date__month-year {
+.date__month-year {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
