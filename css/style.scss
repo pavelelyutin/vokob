@@ -473,7 +473,7 @@ img {
   padding-bottom: 15px;
   border-bottom: 1px solid #DEDEDE;
   background-color: var(--whiteColor);
-  box-shadow: 0px 2px 4px 0px rgba(122, 122, 122, 0.2);
+  // box-shadow: 0px 2px 4px 0px rgba(122, 122, 122, 0.2);
 
   &__search {
     position: absolute;
@@ -681,31 +681,31 @@ img {
   &__btn {
     margin-top: auto;
   }
+}
 
-  .date {
+.date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 120px;
+  margin-bottom: 20px;
+  color: var(--lightGrayColor);
+  font-family: 'Exo2', sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.66px;
+
+  &__day {
+    color: var(--blackColor);
+    font-size: 40px;
+    letter-spacing: -2.2px;
+  }
+
+  &__month-year {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    max-width: 120px;
-    margin-bottom: 20px;
-    color: var(--lightGrayColor);
-    font-family: 'Exo2', sans-serif;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: -0.66px;
-
-    &__day {
-      color: var(--blackColor);
-      font-size: 40px;
-      letter-spacing: -2.2px;
-    }
-
-    &__month-year {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      line-height: 130%;
-    }
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 130%;
   }
 }
 
